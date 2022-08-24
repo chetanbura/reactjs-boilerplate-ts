@@ -1,24 +1,30 @@
-import React from 'react';
+import { Component } from 'react';
 
 import debug from 'debug';
 import { Link } from 'react-router-dom';
 
+import { IErrorBoundaryProps, IErrorBoundaryState, TLogType } from '../../interfaces';
+
 const log = debug('data:errorBoundary');
 
-export class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+export class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> {
+  public state: IErrorBoundaryState = {
+    hasError: false,
+  };
+
+  public static getDerivedStateFromError(): IErrorBoundaryState {
+    // Update state so the next render will show the fallback UI.
+    return { hasError: true };
   }
 
-  componentDidCatch(error) {
+  componentDidCatch(error: Error) {
     // Display fallback UI
     this.setState({ hasError: true });
     // You can also log the error to an error reporting service
     let emailContent = error.stack;
-    const params = {
+    const params: TLogType = {
       type: 'error',
-      body: emailContent.toString(),
+      body: emailContent?.toString(),
       subject: 'Triggered by error boundary',
       action: 'ErrorBoundary',
     };

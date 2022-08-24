@@ -11,5 +11,3 @@ export function useConfiguration() {
 
   return [config];
 }
-
-export default useConfiguration;

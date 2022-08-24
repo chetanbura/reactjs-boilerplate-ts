@@ -1,9 +1,13 @@
 import styles from './loader.module.css';
 
-export const Loader = (props) => (
+export interface ILoaderProps {
+  text?: string;
+}
+
+export const Loader = ({ text }: ILoaderProps) => (
   <section className={`center-align ${styles.loader}`}>
-    {props.text ? (
-      <h3 className="grey-header">{props.text || ''}</h3>
+    {text ? (
+      <h3 className="grey-header">{text || ''}</h3>
     ) : (
       <svg
         version="1.1"

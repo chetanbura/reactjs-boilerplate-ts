@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 
-const retry = (fn, retriesLeft = 5, interval = 1000) =>
+const retry = (fn: any, retriesLeft = 5, interval = 1000) =>
   new Promise((resolve, reject) => {
     fn()
       .then(resolve)
-      .catch((error) => {
+      .catch((error: any) => {
         setTimeout(() => {
           if (retriesLeft === 1) {
             reject(error); // reject('maximum retries exceeded');
@@ -15,4 +15,4 @@ const retry = (fn, retriesLeft = 5, interval = 1000) =>
       });
   });
 
-export const lazyRetry = (operation) => lazy(() => retry(() => operation()));
+export const lazyRetry: any = (operation: any) => lazy((): any => retry(() => operation()));

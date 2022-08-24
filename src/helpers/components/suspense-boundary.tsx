@@ -2,21 +2,21 @@ import { Component, Suspense } from 'react';
 
 import debug from 'debug';
 
+import { IErrorBoundaryProps, IErrorBoundaryState, TLogType } from '../../interfaces';
 import { Loader } from '../../ui/core';
 
 const log = debug('data:errorBoundary');
 
-export class SuspenseBoundary extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+export class SuspenseBoundary extends Component<IErrorBoundaryProps, IErrorBoundaryState> {
+  public state: IErrorBoundaryState = {
+    hasError: false,
+  };
 
   static getDerivedStateFromError() {
     return { hasError: true }; // Update state so the next render will show the fallback UI.
   }
 
-  componentDidCatch(error) {
+  componentDidCatch(error: Error) {
     let operationName = 'Lazy loading';
     if (
       sessionStorage.getItem('crashed') &&
@@ -35,7 +35,7 @@ export class SuspenseBoundary extends Component {
       urlLocation: window.location.href,
       message: error.stack,
     };
-    const params = {
+    const params: TLogType = {
       type: 'error',
       body: JSON.stringify(emailContent),
       subject: 'Triggered by suspense boundary',

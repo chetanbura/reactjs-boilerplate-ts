@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './app';
 import { ErrorBoundary } from './helpers';
 
-const root = document.getElementById('root');
+const root = document.getElementById('root') as HTMLElement;
 
 ReactDOM.render(
   <React.StrictMode>

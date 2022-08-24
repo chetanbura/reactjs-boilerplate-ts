@@ -1,4 +1,6 @@
-const NAV_META = [
+import { TNavMeta } from '../interfaces';
+
+const NAV_META: TNavMeta[] = [
   {
     path: 'about',
     title: 'About',
@@ -26,5 +28,5 @@ const NAV_META = [
 
 export const LOGGED_IN = true;
 
-export const getNavMeta = (isLoggedIn) =>
-  NAV_META.filter((nav) => (nav.isPrivate && isLoggedIn) || !nav.isPrivate);
+export const getNavMeta = (isLoggedIn: boolean): TNavMeta[] =>
+  NAV_META.filter((nav: TNavMeta) => (nav.isPrivate && isLoggedIn) || !nav.isPrivate);
