@@ -1,1 +1,1 @@
-export { Loader } from './spinner/loader';
+export { Loader } from './loader/loader';
