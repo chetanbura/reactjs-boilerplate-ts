@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "firsttris.vscode-jest-runner",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "vscode-icons-team.vscode-icons",
+    "mjmaurer.auto-open-css-modules",
+    "stylelint.vscode-stylelint",
+    "nicoespeon.abracadabra"
+  ]
+}
