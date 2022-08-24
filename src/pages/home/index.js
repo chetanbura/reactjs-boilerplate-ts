@@ -4,7 +4,7 @@ export function Home() {
   return (
     <div className={styles.main}>
       <header>
-        <h1>Welcome to ReactJS boilerplate</h1>
+        <h1>Welcome to ReactJS boilerplate (TypeScript version)</h1>
         <p>
           <b>Author: Chetan Bura</b>
         </p>
