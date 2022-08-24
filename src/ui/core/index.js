@@ -1,1 +1,1 @@
-export * from './loader/loader';
+export { Loader } from './loader/loader';
