@@ -1,0 +1,11 @@
+import { render, screen } from '@testing-library/react';
+
+import { {{ properCase name }} } from './{{ kebabCase name }}';
+
+describe('{{ properCase name }}', () => {
+  it('should render successfully', async () => {
+    // Placeholder test designed to fail, so you look at me :)
+    render(<{{ properCase name }} />);
+    expect(screen.getByText('Does Not Exist')).toBeVisible();
+  });
+});

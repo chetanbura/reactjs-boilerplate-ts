@@ -1,0 +1,82 @@
+{
+  "plugins": ["filename-rules", "lodash", "simple-import-sort"],
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "prettier"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        // ------------------------------------------------------------------------------
+        // TODO: Update this rule while starting the project use prop-type or Typescript
+        "react/prop-types": "off",
+        // ------------------------------------------------------------------------------
+        "filename-rules/match": [2, "kebabcase"],
+        "no-console": ["error"],
+        "no-shadow": ["error"],
+        "lodash/import-scope": [2, "method"],
+        "no-self-assign": ["error", { "props": false }],
+        "template-curly-spacing": "off",
+        "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+        "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }],
+        "react/jsx-indent": [2, 2],
+        "react/no-danger": "error",
+        "react/jsx-key": "error",
+        "jsx-a11y/accessible-emoji": "off",
+        "no-process-env": "error",
+        "eqeqeq": ["error", "always"],
+        "react-hooks/rules-of-hooks": "error",
+        "no-unused-vars": [
+          "error",
+          { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+        ],
+        "simple-import-sort/imports": [
+          2,
+          {
+            "groups": [
+              // Side effect imports.
+              // Imports without declaration are prepended with null char.
+              ["^\\u0000"],
+              // React imports.
+              ["^react$"],
+              // Packages.
+              ["^@?\\w"],
+              // Absolute imports.
+              ["^\\/"],
+              // Relative imports.
+              ["^\\."],
+              // Style imports
+              // anything that ends in css and has a declaration
+              ["^[^\\u0000].*css$"],
+              // Anything not matched in another group.
+              ["^"]
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.stories.*"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    },
+    {
+      "files": "use*.{js,jsx,ts,tsx}",
+      "rules": {
+        "filename-rules/match": [2, "camelcase"]
+      }
+    },
+    {
+      "files": "useConfiguration.{js,jsx,ts,tsx}",
+      "rules": {
+        "no-process-env": "off"
+      }
+    }
+  ]
+}

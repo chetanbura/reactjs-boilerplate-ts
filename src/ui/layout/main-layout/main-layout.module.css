@@ -1,0 +1,8 @@
+.main {
+  justify-content: center;
+  display: flex;
+  height: calc(100vh - 50px);
+  text-align: center;
+  background-color: rgb(10, 32, 62);
+  color: #fff;
+}
