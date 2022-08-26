@@ -5,7 +5,9 @@ export function useConfiguration() {
 
   useEffect(() => {
     setConfig({
-      appEnv: process.env.REACT_APP_ENV,
+      env: {
+        appEnv: process.env.REACT_APP_ENV,
+      },
     });
   }, []);
 

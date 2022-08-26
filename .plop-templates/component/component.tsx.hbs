@@ -1,0 +1,12 @@
+import CL from 'clsx';
+
+import styles from './{{kebabCase name}}.module.css';
+
+export interface I{{properCase name}} {
+  classNames?: string;
+}
+
+export const {{properCase name}} = (function {{properCase name}}({ classNames }: I{{properCase name}})
+{
+  return <div className={CL(styles.main, classNames)}>Welcome to {{properCase name}} Component</div>;
+});
