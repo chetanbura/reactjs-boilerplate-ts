@@ -22,8 +22,8 @@ function actions(componentPath, aType, aSubType, skipTest) {
 
   actions.push({
     type: 'add',
-    path: path.join(sourcePath, '{{kebabCase name}}.js'),
-    templateFile: path.join(TEMPLATE_DIR, 'component.js.hbs'),
+    path: path.join(sourcePath, '{{kebabCase name}}.tsx'),
+    templateFile: path.join(TEMPLATE_DIR, 'component.tsx.hbs'),
   });
   actions.push({
     type: 'add',
@@ -33,13 +33,13 @@ function actions(componentPath, aType, aSubType, skipTest) {
   if (!skipTest)
     actions.push({
       type: 'add',
-      path: path.join(sourcePath, '{{kebabCase name}}.spec.js'),
-      templateFile: path.join(TEMPLATE_DIR, 'component.spec.js.hbs'),
+      path: path.join(sourcePath, '{{kebabCase name}}.spec.tsx'),
+      templateFile: path.join(TEMPLATE_DIR, 'component.spec.tsx.hbs'),
     });
   actions.push({
     type: 'add',
-    path: path.join(sourcePath, '{{ kebabCase name }}.stories.js'),
-    templateFile: path.join(TEMPLATE_DIR, 'component.stories.js.hbs'),
+    path: path.join(sourcePath, '{{ kebabCase name }}.stories.tsx'),
+    templateFile: path.join(TEMPLATE_DIR, 'component.stories.tsx.hbs'),
   });
   return actions;
 }

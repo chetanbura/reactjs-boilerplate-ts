@@ -1,0 +1,27 @@
+{{#if isRootPage ~}}
+// eslint-disable-next-line simple-import-sort/imports
+{{/if}}
+import CL from 'clsx';
+{{#if isRootPage ~}}
+/* SUB-PAGE OUTLET IMPORT PATTERN */
+{{/if}}
+
+import styles from './{{kebabCase name}}.module.css';
+
+interface I{{properCase name}} {
+  classNames?: string;
+}
+
+export const {{properCase name}} = (function {{properCase name}}({ classNames }: I{{properCase name}})
+{
+  return (
+    <div className={CL(styles.main, classNames)}>
+      <header>
+        <h1>Welcome to {{properCase name}} Page</h1>
+      </header>
+      {/* SUB-PAGE OUTLET INJECT PATTERN */}
+    </div>
+  );
+});
+
+export default {{properCase name}};
