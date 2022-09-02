@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import { getNavMeta, LOGGED_IN } from '../../../constants/navigation-meta';
 
-import styles from './header.module.css';
+import styles from './header.module.scss';
 
 export interface IActiveToggle {
   isActive?: boolean;

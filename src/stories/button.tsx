@@ -1,4 +1,4 @@
-import './button.css';
+import './button.scss';
 
 /**
  * Primary UI component for user interaction

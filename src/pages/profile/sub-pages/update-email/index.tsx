@@ -1,4 +1,4 @@
-import styles from './update-email.module.css';
+import styles from './update-email.module.scss';
 
 export function UpdateEmail() {
   return (

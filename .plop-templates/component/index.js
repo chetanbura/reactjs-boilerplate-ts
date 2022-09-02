@@ -27,8 +27,8 @@ function actions(componentPath, aType, aSubType, skipTest) {
   });
   actions.push({
     type: 'add',
-    path: path.join(sourcePath, '{{kebabCase name}}.module.css'),
-    templateFile: path.join(TEMPLATE_DIR, 'component.module.css.hbs'),
+    path: path.join(sourcePath, '{{kebabCase name}}.module.scss'),
+    templateFile: path.join(TEMPLATE_DIR, 'component.module.scss.hbs'),
   });
   if (!skipTest)
     actions.push({
