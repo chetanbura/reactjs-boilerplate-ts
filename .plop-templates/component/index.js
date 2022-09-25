@@ -1,7 +1,15 @@
+const prettier = require('prettier');
 const path = require('path');
 const fs = require('fs');
 
 const TEMPLATE_DIR = __dirname;
+
+async function format(code) {
+  const options = await prettier.resolveConfig(path.resolve(__dirname, '../../'));
+  return prettier.format(code, {
+    ...options,
+  });
+}
 
 /*
 depend on name
@@ -17,7 +25,7 @@ function actions(componentPath, aType, aSubType, skipTest) {
           aType === 'pages' ? 'components' : '',
           '{{ kebabCase name }}'
         )
-      : path.join(aType === 'shared' ? 'components' : '', '{{ kebabCase name }}')
+      : '{{ kebabCase name }}'
   );
 
   actions.push({
@@ -27,8 +35,8 @@ function actions(componentPath, aType, aSubType, skipTest) {
   });
   actions.push({
     type: 'add',
-    path: path.join(sourcePath, '{{kebabCase name}}.module.css'),
-    templateFile: path.join(TEMPLATE_DIR, 'component.module.css.hbs'),
+    path: path.join(sourcePath, '{{kebabCase name}}.module.scss'),
+    templateFile: path.join(TEMPLATE_DIR, 'component.module.scss.hbs'),
   });
   if (!skipTest)
     actions.push({
@@ -41,6 +49,35 @@ function actions(componentPath, aType, aSubType, skipTest) {
     path: path.join(sourcePath, '{{ kebabCase name }}.stories.tsx'),
     templateFile: path.join(TEMPLATE_DIR, 'component.stories.tsx.hbs'),
   });
+
+  // Add to barrel file
+  const barrelPath = path.join(sourcePath, '..', 'index.ts');
+  if (fs.existsSync(barrelPath)) {
+    actions.push({
+      type: 'modify',
+      path: barrelPath,
+      pattern: '// PLOP_MODIFY_PATTERN_BARREL_FILE',
+      template: `
+      export { {{ properCase name }} } from './{{ kebabCase name }}/{{ kebabCase name }}';
+      // PLOP_MODIFY_PATTERN_BARREL_FILE`,
+      transform: async function (code) {
+        const formattedCode = await format(code);
+        return formattedCode;
+      }
+    });
+  } else {
+    actions.push({
+      type: 'add',
+      path: barrelPath,
+      template: `
+      export { {{ properCase name }} } from './{{ kebabCase name }}/{{ kebabCase name }}';
+      // PLOP_MODIFY_PATTERN_BARREL_FILE`,
+      transform: async function (code) {
+        const formattedCode = await format(code);
+        return formattedCode;
+      }
+    });
+  }
   return actions;
 }
 

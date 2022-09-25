@@ -1,8 +1,10 @@
+import React from 'react';
+
 import { NavLink } from 'react-router-dom';
 
 import { getNavMeta, LOGGED_IN } from '../../../constants/navigation-meta';
 
-import styles from './header.module.css';
+import styles from './header.module.scss';
 
 export interface IActiveToggle {
   isActive?: boolean;
@@ -20,12 +22,12 @@ export const Header = () => {
         Home
       </NavLink>
       {navMeta.map((nav) => (
-        <>
+        <React.Fragment key={nav.path}>
           {'  '}
           <NavLink style={activeToggle} to={nav.path}>
             {nav.title}
           </NavLink>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );

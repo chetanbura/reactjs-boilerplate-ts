@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
-import styles from './profile.module.css';
+import styles from './profile.module.scss';
 
 export function Profile() {
   const location = useLocation();

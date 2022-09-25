@@ -1,22 +1,21 @@
-import './index.css';
+import './index.scss';
 
 import React from 'react';
 
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './app';
 import { ErrorBoundary } from './helpers';
 
-const root = document.getElementById('root') as HTMLElement;
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-ReactDOM.render(
+root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </ErrorBoundary>
-  </React.StrictMode>,
-  root
+  </React.StrictMode>
 );

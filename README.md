@@ -1,5 +1,5 @@
 ---
-title: 'React JS application boilerplate'
+title: 'React JS application boilerplate with TypeScript support'
 author:
   - name: 'Chetan Bura'
     url: https://github.com/chetanbura
@@ -21,8 +21,9 @@ This project is made on base of
 - [Husky pre/post commit hook](https://typicode.github.io/husky/#/)
 - [Storybook](https://storybook.js.org/)
 - [Plop- Generators (component/page)](https://www.npmjs.com/package/plop)
-- Custom hook for app configuration
 - [Typescript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+- Custom hooks for app configuration and Axios
 
 # Getting Started with React App
 
@@ -102,7 +103,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-## Consider below libraries for faster development as per project need.
+## Consider below libraries for faster development as per project need
 
 #### React hook form
 
@@ -114,13 +115,13 @@ This reusable React component will manage all of your changes to the document he
 
 #### React UI Libraries
 
-1.  [Chakra UI](https://chakra-ui.com/docs).
-2.  [Material UI](https://mui.com/material-ui/getting-started/overview/).
-3.  [Semantic UI React](https://react.semantic-ui.com/).
-4.  [AntD UI React](https://ant.design/docs/react/introduce).
+1. [Chakra UI](https://chakra-ui.com/docs).
+2. [Material UI](https://mui.com/material-ui/getting-started/overview/).
+3. [Semantic UI React](https://react.semantic-ui.com/).
+4. [AntD UI React](https://ant.design/docs/react/introduce).
 
 ---
 
-### For more information please refer `/docs` section.
+### For more information please refer `/docs` section
 
 ---

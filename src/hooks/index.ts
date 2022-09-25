@@ -1,2 +1,3 @@
-export * from './utils/provider-context';
+export * from './providers/axios-provider';
 export * from './useConfiguration';
+export * from './useAxios';

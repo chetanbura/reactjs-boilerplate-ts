@@ -37,8 +37,8 @@ function actions(componentPath, pageType, subPageFor, name) {
 
   actions.push({
     type: 'add',
-    path: path.join(sourcePath, '{{ kebabCase name }}.module.css'),
-    templateFile: path.join(TEMPLATE_DIR, 'page.module.css.hbs'),
+    path: path.join(sourcePath, '{{ kebabCase name }}.module.scss'),
+    templateFile: path.join(TEMPLATE_DIR, 'page.module.scss.hbs'),
   });
 
   if (pageType === 'root-page') {
