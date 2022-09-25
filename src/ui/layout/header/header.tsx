@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { NavLink } from 'react-router-dom';
 
 import { getNavMeta, LOGGED_IN } from '../../../constants/navigation-meta';
@@ -20,12 +22,12 @@ export const Header = () => {
         Home
       </NavLink>
       {navMeta.map((nav) => (
-        <>
+        <React.Fragment key={nav.path}>
           {'  '}
           <NavLink style={activeToggle} to={nav.path}>
             {nav.title}
           </NavLink>
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
