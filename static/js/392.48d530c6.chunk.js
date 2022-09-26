@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_boilerplate_v1=self.webpackChunkreact_boilerplate_v1||[]).push([[392,412],{5392:function(e,t,n){n.r(t),n.d(t,{Contact:function(){return r}});var a=n(8412),c=n(184);function r(){return(0,c.jsx)("div",{className:a.default.main,children:(0,c.jsx)("header",{children:(0,c.jsx)("h1",{children:"Welcome to Contact Page"})})})}t.default=r},8412:function(e,t,n){n.r(t),t.default={}}}]);
+//# sourceMappingURL=392.48d530c6.chunk.js.map

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkreact_boilerplate_v1=self.webpackChunkreact_boilerplate_v1||[]).push([[980,739],{5980:function(e,a,t){t.r(a),t.d(a,{UpdateEmail:function(){return r}});var l=t(2739),n=t(184);function r(){return(0,n.jsx)("div",{className:l.default.main,children:(0,n.jsx)("header",{children:(0,n.jsx)("h1",{children:"Welcome to UpdateEmail Page"})})})}a.default=r},2739:function(e,a,t){t.r(a),a.default={}}}]);
+//# sourceMappingURL=980.0cf2f479.chunk.js.map

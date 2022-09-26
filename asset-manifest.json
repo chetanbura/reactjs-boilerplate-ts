@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-boilerplate-ts/static/css/main.c2ee0535.css",
+    "main.js": "/react-boilerplate-ts/static/js/main.083f1356.js",
+    "static/js/392.48d530c6.chunk.js": "/react-boilerplate-ts/static/js/392.48d530c6.chunk.js",
+    "static/js/412.592b07d4.chunk.js": "/react-boilerplate-ts/static/js/412.592b07d4.chunk.js",
+    "static/js/980.0cf2f479.chunk.js": "/react-boilerplate-ts/static/js/980.0cf2f479.chunk.js",
+    "static/js/739.1c0270f1.chunk.js": "/react-boilerplate-ts/static/js/739.1c0270f1.chunk.js",
+    "static/css/858.31d6cfe0.chunk.css": "/react-boilerplate-ts/static/css/858.31d6cfe0.chunk.css",
+    "static/css/757.31d6cfe0.chunk.css": "/react-boilerplate-ts/static/css/757.31d6cfe0.chunk.css",
+    "index.html": "/react-boilerplate-ts/index.html",
+    "main.c2ee0535.css.map": "/react-boilerplate-ts/static/css/main.c2ee0535.css.map",
+    "main.083f1356.js.map": "/react-boilerplate-ts/static/js/main.083f1356.js.map",
+    "392.48d530c6.chunk.js.map": "/react-boilerplate-ts/static/js/392.48d530c6.chunk.js.map",
+    "412.592b07d4.chunk.js.map": "/react-boilerplate-ts/static/js/412.592b07d4.chunk.js.map",
+    "980.0cf2f479.chunk.js.map": "/react-boilerplate-ts/static/js/980.0cf2f479.chunk.js.map",
+    "739.1c0270f1.chunk.js.map": "/react-boilerplate-ts/static/js/739.1c0270f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c2ee0535.css",
+    "static/js/main.083f1356.js"
+  ]
+}
