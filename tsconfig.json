@@ -15,14 +15,6 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
-    // "paths": {
-    //   "@interface": ["interfaces/*"],
-    //   "@ui/core": ["ui/core/*"],
-    //   "@ui/form": ["ui/form/*"],
-    //   "@helpers": ["helpers/*"],
-    //   "@hooks": ["hooks/*"],
-    //   "@shared/components": ["shared/components/*"],
-    // }
   },
   "include": ["src"],
   "exclude": ["node_modules"]
