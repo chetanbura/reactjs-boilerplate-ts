@@ -14,16 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": "src"
-    // "paths": {
-    //   "@interface": ["interfaces/*"],
-    //   "@ui/core": ["ui/core/*"],
-    //   "@ui/form": ["ui/form/*"],
-    //   "@helpers": ["helpers/*"],
-    //   "@hooks": ["hooks/*"],
-    //   "@shared/components": ["shared/components/*"],
-    // }
+    "jsx": "react-jsx"
   },
   "include": ["src"],
   "exclude": ["node_modules"]
