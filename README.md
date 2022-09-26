@@ -13,10 +13,11 @@ author:
 
 This project is made on base of
 
-- [React v17](https://reactjs.org/docs/getting-started.html)
+- [React v18](https://reactjs.org/docs/getting-started.html)
 - [React Code-Splitting](https://reactjs.org/docs/code-splitting.html)
 - [React Router v6](https://reactrouter.com/docs/en/v6)
 - [Eslint](https://eslint.org/)
+- [Jest](https://jestjs.io/docs/api)
 - [Prettier](https://prettier.io/)
 - [Husky pre/post commit hook](https://typicode.github.io/husky/#/)
 - [Storybook](https://storybook.js.org/)
@@ -49,30 +50,38 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 
 ### `npm run lint`
 
-Find the eslint issue from the project folder.\
+Find the eslint issue from the project folder.
 
 ### `npm run lint:fix`
 
-Auto fix the fixable eslint issue from the project folder.\
+Auto fix the fixable eslint issue from the project folder.
 
 ### `npm run format`
 
-Format the all files with prettier from the project folder.\
+Format the all files with prettier from the project folder.
 
-### `npm run plop`
+### `npm run test`
 
-It initiate the generator script and used to generate pages/component as per options selected by users.\
+Format the all files with prettier from the project folder.
+
+### `npm run coverage`
+
+It generate the coverage reports on jets tests
+
+### `npm run generate`
+
+It initiate the generator script and used to generate pages/component as per options selected by users.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

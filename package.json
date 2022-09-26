@@ -29,7 +29,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "plop": "plop",
+    "generate": "plop",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
