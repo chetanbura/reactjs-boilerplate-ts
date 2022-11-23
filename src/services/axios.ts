@@ -28,18 +28,29 @@ export const createAxiosInstance = ({ baseURL }: IAxiosInstance): AxiosInstance 
     }
   );
 
-  // Add a response interceptor
   instance.interceptors.response.use(
     function (response) {
       // Any status code that lie within the range of 2xx cause this function to trigger
       // Do something with response data
-      log(`Response for request: ${response.request}`, response.data);
+      log('Response URL:', response.config.url);
+      if (response.config.params) {
+        log('Response Params:', response.config.params);
+      }
+      log('Response Data: ', response.data);
       return response;
     },
     function (error) {
       // Any status codes that falls outside the range of 2xx cause this function to trigger
       // Do something with response error
-      log(`Error while response for:`, error);
+      log('Response URL:', error.config.url);
+      if (error.config.params) {
+        log('Response Params:', error.config.params);
+      }
+      if (error?.response?.data) {
+        log('Response Error: ', error.response.data);
+        return Promise.reject(error.response.data);
+      }
+      log('Response Error: ', error);
       return Promise.reject(error);
     }
   );
