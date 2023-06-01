@@ -31,7 +31,7 @@ export function RoutesGuard({
           return (
             <Route
               key={nav.path}
-              index={nav.index}
+              // index={nav.index}
               path={nav.path}
               element={
                 <SuspenseBoundary>
