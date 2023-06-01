@@ -22,7 +22,7 @@
     "test": "jest",
     "coverage": "jest --collect-coverage",
     "eject": "react-scripts eject",
-    "prepare": "husky install",
+    "prepare": "node -e \"if(require('fs').existsSync('.git')){process.exit(1)}\" || husky install",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
@@ -68,7 +68,7 @@
     "webpack": "5.85.0"
   },
   "engines": {
-    "node": ">=v16.15.0 =<v17.9.0"
+    "node": ">=16.15.0 <17.9.1"
   },
   "browserslist": {
     "production": [
