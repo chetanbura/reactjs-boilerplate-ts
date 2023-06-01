@@ -28,7 +28,7 @@ export class ErrorBoundary extends Component<IErrorBoundaryProps, IErrorBoundary
       subject: 'Triggered by error boundary',
       action: 'ErrorBoundary',
     };
-    log('Triggered by error boundary', params);
+    log('Triggered by error boundary!!!', params);
   }
 
   render() {
